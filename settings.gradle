@@ -1,2 +1,2 @@
-include ':app', ':ConnectorLib'
+include ':sample', ':ConnectorLib'
 rootProject.name='AndroidServiceCommunication'

@@ -7,3 +7,19 @@
 4. lib/connector is the main library can be used to connect any Service-Activity for data transferring.
 5. A sample implementation is provided to demonstrate how to use lib/connector in your app.
 6. Written in Kotlin.
+
+Project level `build.gradle`
+```groovy
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+App level `build.gradle`
+```groovy
+implementation 'com.github.FantasticAndroid:Activity-Service-Communication:(insert latest version)'
+```
+Take a look into 'sample' app module.

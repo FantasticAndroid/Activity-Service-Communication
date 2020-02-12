@@ -25,5 +25,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core:1.2.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation project(':ConnectorLib')
+    implementation 'com.github.FantasticAndroid:Activity-Service-Communication:1.0'
+    ////implementation project(':ConnectorLib')
 }
+
+//https://medium.com/@ome450901/publish-an-android-library-by-jitpack-a0342684cbd0
