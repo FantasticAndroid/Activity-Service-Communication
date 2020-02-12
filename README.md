@@ -22,4 +22,4 @@ App level `build.gradle`
 ```groovy
 implementation 'com.github.FantasticAndroid:Activity-Service-Communication:(insert latest version)'
 ```
-Take a look into 'sample' app module.
+### Take a look into 'sample' app module.
