@@ -15,7 +15,8 @@ import android.widget.Toast
  * @property isServiceBounded Boolean
  * @constructor
  */
-abstract class BoundIntentService(name: String):IntentService(name),HandleMessageCallback {
+abstract class BoundIntentService(name: String):IntentService(name),
+    HandleMessageCallback {
 
     // Target we publish for clients to send messages to IncomingHandler.
     private lateinit var receivingMessenger : Messenger
@@ -44,7 +45,8 @@ abstract class BoundIntentService(name: String):IntentService(name),HandleMessag
      */
     protected fun sendMessageToUI(message: String) {
         try {
-            senderMessenger?.send(Message.obtain(null, MessageReceiver.SERVICE_SENT_DATA, message))
+            senderMessenger?.send(Message.obtain(null,
+                MessageReceiver.SERVICE_SENT_DATA, message))
         } catch (e: RemoteException) {
             e.printStackTrace()
         } catch (e: NullPointerException) {

@@ -83,7 +83,9 @@ class ServiceManager(
 
     fun disconnectedToService() {
         try {
-            sendMessageToService(Message.obtain(null, MessageReceiver.SERVICE_DISCONNECT))
+            sendMessageToService(Message.obtain(null,
+                MessageReceiver.SERVICE_DISCONNECT
+            ))
             activity.unbindService(appServiceConnection?.get()!!)
             appServiceConnection?.clear()
         } catch (e: Exception) {
@@ -94,7 +96,9 @@ class ServiceManager(
 
     fun stopService() {
         try {
-            sendMessageToService(Message.obtain(null, MessageReceiver.SERVICE_STOP))
+            sendMessageToService(Message.obtain(null,
+                MessageReceiver.SERVICE_STOP
+            ))
             activity.unbindService(appServiceConnection?.get()!!)
             activity.stopService(serviceIntent)
             appServiceConnection?.clear()
@@ -127,7 +131,9 @@ class ServiceManager(
 
         override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
             senderToService = Messenger(service)
-            val msg = Message.obtain(null, MessageReceiver.SERVICE_CONNECTED)
+            val msg = Message.obtain(null,
+                MessageReceiver.SERVICE_CONNECTED
+            )
             sendMessageToService(msg)
         }
     }

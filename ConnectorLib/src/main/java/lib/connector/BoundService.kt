@@ -42,7 +42,8 @@ abstract class BoundService:Service(), HandleMessageCallback {
      */
     protected fun sendMessageToUI(message: String) {
         try {
-            senderMessenger?.send(Message.obtain(null, MessageReceiver.SERVICE_SENT_DATA, message))
+            senderMessenger?.send(Message.obtain(null,
+                MessageReceiver.SERVICE_SENT_DATA, message))
         } catch (e: RemoteException) {
             e.printStackTrace()
         } catch (e: NullPointerException) {
